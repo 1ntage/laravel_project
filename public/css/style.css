@@ -1,0 +1,21 @@
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.in-stock {
+    background-color: #f58b40;
+}
+
+.out-of-stock {
+    background-color: #beb2ae;
+}
