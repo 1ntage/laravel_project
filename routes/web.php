@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 
@@ -19,3 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/products', [ProductController::class, 'index']);
+
+Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
+
+Route::post('/order/{id}', [OrderController::class, 'store'])->name('order.store');
