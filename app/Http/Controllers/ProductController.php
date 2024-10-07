@@ -9,13 +9,13 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::all();
-        return view('products', ['products' => $products]);
+        $product = Product::all();
+        return view('products', ['products' => $product]);
     }
 
     public function show($id)
     {
-        $products = Product::findOrFail($id);
-        return view('product', ['product' => $products]);
+        $product = Product::findOrFail($id);
+        return view('product', ['product' => $product]);
     }
 }

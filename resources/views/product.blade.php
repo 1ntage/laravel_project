@@ -19,6 +19,8 @@
     <button type="submit">Заказать</button>
 </form>
 
+<a href="{{ route('products') }}">К списку продуктов</a>
+
 @if (session('success'))
     <div class="alert alert-success">
         {{ session('success') }}

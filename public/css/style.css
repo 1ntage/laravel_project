@@ -19,3 +19,26 @@
 .out-of-stock {
     background-color: #beb2ae;
 }
+
+.alert{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+button{
+    width: 7%;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    background-color: #e5f4ff;
+    transition: 0.5s all;
+}
+
+button:hover{
+    background-color: #c9e9ff;
+    cursor: pointer;;
+    transition: 0.5s all;
+}

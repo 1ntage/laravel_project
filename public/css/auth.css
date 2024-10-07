@@ -1,0 +1,48 @@
+.auth_form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.auth_input{
+    width: 30%;
+    height: 20px;
+    margin: 10px;
+    border: 1px solid #000;
+    font-size: 16px;
+    padding: 5px;
+}
+
+label{
+    font-size: 20px;
+}
+
+.alert{
+    font-size: 20px;
+}
+
+.alert-danger{
+    color: red;
+}
+
+button{
+    width: 7%;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    background-color: #e5f4ff;
+    transition: 0.5s all;
+}
+
+button:hover{
+    background-color: #c9e9ff;
+    cursor: pointer;;
+    transition: 0.5s all;
+}
