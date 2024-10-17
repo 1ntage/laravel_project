@@ -39,4 +39,19 @@ class OrderController extends Controller
         $orders = Order::where('user_id', Auth::id())->get();
         return view('orders.index', ['orders' => $orders]);
     }
+
+    public function approve(Order $order)
+    {
+        if ($order->product->amount >= $order->quantity) {
+            $order->update(['status' => 'approved']);
+            return redirect()->back()->with('success', 'Заказ был одобрен.');
+        }
+        return redirect()->back()->with('error', 'Недостаточно товара на складе.');
+    }
+
+    public function deliver(Order $order)
+    {
+        $order->update(['status' => 'delivered']);
+        return redirect()->back()->with('success', 'Заказ доставлен.');
+    }
 }

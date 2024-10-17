@@ -12,7 +12,7 @@
 <ul>
     @foreach ($orders as $order)
         <li>
-            Товар: {{ $order->product->name }} | Количество: {{ $order->quantity }} | Сумма: {{ $order->total_cost }} руб.
+            Товар: {{ $order->product->name }} | Количество: {{ $order->quantity }} | Сумма: {{ $order->total_cost }} руб. | Статус: {{ $order->status }}
         </li>
     @endforeach
 </ul>

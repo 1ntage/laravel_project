@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+@extends('layouts.app')
+
+@section('title', 'Продукты')
+@section('style')
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-</head>
-<body>
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+@endsection
+
+@section('content')
 <div class="products-container">
     @foreach ($products as $product)
         <div class="product-card {{ $product->amount == 0 ? 'out-of-stock' : 'in-stock' }}">
@@ -21,11 +15,10 @@
         </div>
     @endforeach
 </div>
-<a href="{{ route('myOrders')}}">Мои заказы</a>
+<a href="/my-orders">Мои заказы</a>
 <form action="{{ route('logout') }}" method="get">
     <button type="submit">
         Выйти
     </button>
 </form>
-</body>
-</html>
+@endsection

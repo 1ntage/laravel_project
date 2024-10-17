@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
@@ -35,3 +36,8 @@ Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('regi
 Route::post('/register', [AuthController::class, 'register']);
 
 Route::get('/my-orders', [OrderController::class, 'myOrders'])->name('myOrders')->middleware('auth');
+
+Route::get('/admin', [AdminController::class, 'index'])->middleware('admin');
+
+Route::post('/orders/{order}/approve', [OrderController::class, 'approve'])->name('orders.approve');
+Route::post('/orders/{order}/deliver', [OrderController::class, 'deliver'])->name('orders.deliver');
